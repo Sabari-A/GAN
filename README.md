@@ -31,6 +31,29 @@ After training, the GAN model is capable of generating new samples that resemble
 
 ## Additional Information
 For those interested in exploring further, this repo has a trained generator model in the `archive` folder. This model has been trained for over 2000 epochs and provides better results in generating fake images.
+### Loading Pre-trained Models
+
+If you wish to load pre-trained models, you can find them in the following locations:
+
+- **25 Epochs Model**: You can find the model trained for 25 epochs in the root folder of this repository.
+
+- **2000 Epochs Model**: For a model trained for a more extended period, check the `archive` folder. The model stored here has been trained for over 2000 epochs and provides better results in generating fake images.
+
+To load a fully trained model, use the following code snippet:
+
+```python
+# Loading fully trained model
+generator.load_weights(os.path.join('archive', 'generatormodel.h5'))
+
+# Predictions
+imgs = generator.predict(tf.random.normal((16,128,1)))
+
+# Plotting the images
+fig, ax = plt.subplots(ncols=4, nrows=4, figsize=(10,10))
+for r in range(4): 
+    for c in range(4): 
+        ax[r][c].imshow(imgs[(r+1)*(c+1)-1])
+```
 
 ## Usage
 1. Clone the repository.
