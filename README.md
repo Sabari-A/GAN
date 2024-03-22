@@ -28,6 +28,7 @@ The discriminator model is responsible for distinguishing between real and fake 
 
 ## Generated Samples
 After training, the GAN model is capable of generating new samples that resemble fashion items.
+![sample](samples.png)
 
 ## Additional Information
 For those interested in exploring further, this repo has a trained generator model in the `archive` folder. This model has been trained for over 2000 epochs and provides better results in generating fake images.
