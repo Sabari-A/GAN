@@ -59,4 +59,4 @@ for r in range(4):
 ## Usage
 1. Clone the repository.
 2. Install the required packages using `pip install -r requirements.txt`.
-3. Open and run the `project.ipynb` notebook to train the GAN model and generate samples.
+3. Open and run the `gan.ipynb` notebook to train the GAN model and generate samples.
